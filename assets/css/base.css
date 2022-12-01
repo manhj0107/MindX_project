@@ -1,0 +1,107 @@
+:root {
+    --white-color: #FFF;
+    --black-color: #000;
+    --text-color: #333;
+    --heading-color: #175c62;
+    --font-heading: "Overlock",Arial,Helvetica,sans-serif;
+    --font-services-info: #175c62;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    line-height: 14px;
+    font-size: 15px;
+    font-family: "Source Sans Pro",Arial,Helvetica,sans-serif;
+    box-sizing: border-box;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 80px auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* button */
+.btn {
+    background-color: #FFF;
+    text-align: center;
+    color: #175c62;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn:hover {
+    color: #FFF;
+}
+.btn::after {
+    content: "";
+    background: #175c62;
+    position: absolute;
+    z-index: -1;
+    display: block;
+}
+  
+.btn.btn-support::after {
+    transition: all 0.3s ease;
+  }
+.btn.btn-support:hover::after {
+    transition: all 0.3s ease-out;
+}
+  
+.btn.btn-support::after {
+    border-radius: 50%;
+    left: -50%;
+    right: -50%;
+    top: -150%;
+    bottom: -150%;
+    line-height: 8.34em;
+    transform: scale(0, 0);
+}
+.btn.btn-support:hover::after {
+    transform: scale(1, 1);
+}
+
+
+/* Mobile: width < 740px */
+@media only screen and (max-width: 46.1875em) {
+    .grid {
+        /* width: 46.1875em; */
+        margin: 0 auto;
+    }
+    
+    .container__services__detail {
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+        flex-wrap: wrap;
+    }
+
+    .container__services__item1,
+    .container__services__item2,
+    .container__services__item3,
+    .container__services__item4 {
+        margin-bottom: 20px;
+    }
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    /* .container__services__detail {
+        display: block;
+        flex-direction: column;
+        flex-wrap: wrap;
+    } */
+}
