@@ -432,6 +432,7 @@
 }
 .content__masonary{
     display: flex;
+    margin-left: -60px;
 }
 .content__masonary__title{
     height: 300px;
