@@ -410,3 +410,32 @@
     line-height: 2;
     margin-left: 60px;
 }
+
+/* content */
+.content__father{
+    color: black;
+    background-color: white;
+}
+.content__header{
+    text-align: center;
+}
+.content__header__tag{
+    font-size: 3rem;
+    line-height: 1.05;
+}
+.content__header__tag--name{
+    display: block;
+    color: inherit;
+}
+.content__bottom__spacing{
+    margin-bottom: 4rem;
+}
+.content__masonary{
+    display: flex;
+}
+.content__masonary__title{
+    height: 300px;
+    position: absolute;
+    left: 0%;
+    top: 0px;
+}
