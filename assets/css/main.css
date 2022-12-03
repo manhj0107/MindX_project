@@ -1,4 +1,46 @@
+/* header */
+.header {
+    max-width: 100%;  
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    /* background-color: #fff; */
+    box-shadow: 0 2px 2px -2px #ccc;
+}
+
+.header__reset-css {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    background-color: #FFF;
+}
+
+.header-container {
+    margin-bottom: 0;
+    display: flex;
+}
+
+
+.header-right {
+    display: flex;
+}
+
+.header__logo {
+    display: flex;
+    
+}
+
+.header__logo-img {
+    height: 65px;
+    max-width: 100%;
+}
+
 /* container services */
+.container {
+    margin-top: 150px;    
+}
+
 .container__services {
     display: block;    
 }
@@ -22,7 +64,7 @@
 .container__services--font-heading-content {
     margin: auto;
     font-size: 1.375rem;
-    ;
+    margin-top: 0.7em;
     line-height: 1.4;
     font-family: "Noto Serif",Arial,Helvetica,sans-serif;
     color: var(--font-services-info);
@@ -160,8 +202,7 @@
 }
 
 .headprd__head-font {
-    width: 50%;
-    padding: 0 20px 0 0;
+    width: 40%;
     min-height: 200px;
     margin: auto;
 }
@@ -193,15 +234,17 @@
     font-weight: 600;
     height: fit-content;
     width: 50%;
-    padding: 15px 15px;
 }
 
 /* Product grid */
 .header__product__frame {
     display: flex;
-    width: 50%;
-    align-self: center;
+    width: 51.5%;
     margin: 0;
+}
+
+.product__frame-father {
+    padding: 15px 15px;
 }
 
 .headprd__product {
@@ -225,7 +268,6 @@
     font-weight: 600;
     height: fit-content;
     width: 25%;
-    padding: 15px 15px;
 }
 .headprd__icon-size {
     margin-bottom: 20px;
@@ -235,7 +277,6 @@
 .product__frame-4 {
     width: 100%;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -247,10 +288,10 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: -80px;
     padding: 40px 0; 
 }
-.footer .container{
+.footer .footer_father{
+    margin: 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -264,8 +305,7 @@
     /* margin-left: -50px; */
     line-height: 1.5;
 }
-.container__about1{
-    
+.container__about1{  
     margin-left: -130px;
 }
 .container__about1 h2{
