@@ -239,12 +239,18 @@
 /* Product grid */
 .header__product__frame {
     display: flex;
-    width: 51.5%;
+    width: 50%;
     margin: 0;
+}
+
+.product__frame-father-only2product {
+    padding: 15px 15px;
+    width: 50%;
 }
 
 .product__frame-father {
     padding: 15px 15px;
+    width: 25%;
 }
 
 .headprd__product {
@@ -427,18 +433,22 @@
     display: block;
     color: inherit;
 }
-.content__bottom__spacing{
-    margin-bottom: 4rem;
-}
+
 .content__masonary{
     display: flex;
-    margin-left: -60px;
 }
 .content__masonary__title{
-    height: 300px;
-    position: absolute;
-    left: 0%;
-    top: 0px;
+    width: 25%;
+}
+
+/* maybe sau này sẽ dùng nên để lại */
+/* .content__masonary__title--image {
+    
+} */
+
+.content__masonary__title--image-size {
+    max-width: 100%;
+    height: 137px;
 }
 
 /* medical network */ 
