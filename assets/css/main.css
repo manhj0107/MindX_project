@@ -440,3 +440,93 @@
     left: 0%;
     top: 0px;
 }
+
+/* medical network */ 
+.medical__network{
+    padding: 55px 0;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% auto;
+}
+.medical__network__container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.medical__network__title{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+    color: #3375b6;
+    margin-bottom: 53px;
+}
+.medical__network__special{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.medical__network__special li{
+    width: 33%;
+    margin-bottom: 55px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.medical__network__number{
+    width: 110px;
+    height: 110px;
+    font-size: 36px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    color: #FFF;
+    background-color: #f79520;
+    border-radius: 50%;
+    font-weight: 900;
+    margin-bottom: 16px;
+}
+.medical__network__text{
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.medial__network__map{
+    width: 486px;
+}
+.img-map{
+    display: block;
+    margin: auto;
+    width: 483px;
+    height: 625px;
+    cursor: zoom-in;
+
+}
