@@ -2,9 +2,10 @@
     --white-color: #FFF;
     --black-color: #000;
     --text-color: #333;
-    --heading-color: #175c62;
+    --heading-color: #F79520;
+    --background-color: #F79520;
     --font-heading: "Overlock",Arial,Helvetica,sans-serif;
-    --font-services-info: #175c62;
+    --font-services-info: #F79520;
 }
 
 * {
@@ -38,7 +39,7 @@ html {
 .btn {
     background-color: #FFF;
     text-align: center;
-    color: #175c62;
+    color: #F79520;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -49,7 +50,7 @@ html {
 }
 .btn::after {
     content: "";
-    background: #175c62;
+    background: #F79520;
     position: absolute;
     z-index: -1;
     display: block;
@@ -73,6 +74,15 @@ html {
 }
 .btn.btn-support:hover::after {
     transform: scale(1, 1);
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+    to {
+        transform: scale(var(--growth-to));
+    }
 }
 
 
