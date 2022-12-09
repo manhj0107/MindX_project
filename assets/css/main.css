@@ -21,19 +21,117 @@
     display: flex;
 }
 
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+    width: inherit;
+}
 
-.header-right {
+.header__left {
     display: flex;
 }
 
 .header__logo {
     display: flex;
-    
+    justify-content: center;
 }
 
 .header__logo-img {
-    height: 65px;
+    height: 68px;
     max-width: 100%;
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+}
+
+
+.header__right-subject {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+.header__right-subject-item {
+    position: relative;
+    padding: 27px 15px;
+    cursor: pointer;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.header__right-subject-item::after {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    height: 3px;
+    background-color: #F79520;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 400ms ease all;
+    opacity: 0;
+}
+
+.header__right-subject-item:hover.header__right-subject-item::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+
+/* hide-show sub__menu */
+.header__right-subject-item:hover .sub__menu{
+    display: block;
+}
+
+.sub__menu {
+    display: none;
+    position: absolute;
+    list-style: none;
+    min-width: 180px;
+    top: 100%;
+    right: 0;
+    background-color: #FFF;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    padding: 0;
+    transform-origin: calc(100% - 20px) top;
+    animation: subMenuGrowth ease-in 0.3s;
+    will-change: opacity, transform;
+}
+
+@keyframes subMenuGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: 1;
+    }
+}
+
+.sub__menu a{
+    text-decoration: none;
+    color: var(--text-color);
+    width: fit-content;
+}
+
+.sub__menu li {
+    padding: 15px 15px;
+    font-weight: 100;
+}
+
+.sub__menu li:hover {
+    background-color: var(--background-color);
+    color: var(--white-color);
 }
 
 /* container services */
@@ -110,7 +208,7 @@
 
 .container__services__item--icon i{
     font-size: 70px;
-    color: #175C62;
+    color: #F79520;
 }
 
 .container__services__item--name {
@@ -133,7 +231,7 @@
 }
 
 .container__services__item--info {
-    color: var(--font-services-info);
+    color: var(--text-color);
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -154,7 +252,7 @@
     padding: 1.322em 1.5em;
     background-color: #FFF;
     text-align: center;
-    color: #175c62;
+    color: #F79520;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -166,7 +264,7 @@
 }
   .btnservices::after {
     content: "";
-    background: #175c62;
+    background: #F79520;
     position: absolute;
     z-index: -1;
     display: block;
