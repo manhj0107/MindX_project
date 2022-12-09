@@ -17,12 +17,13 @@ html {
     font-size: 15px;
     font-family: "Source Sans Pro",Arial,Helvetica,sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .grid {
     width: 1240px;
     max-width: 100%;
-    margin: 0 auto 80px auto;
+    margin: 80px auto;
     padding: 0 20px;
 }
 
