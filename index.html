@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Techcare</title>
+    <title>AiHealth</title>
     <link rel="icon" type="image/x-icon" href="assets/img/logo__header.jpg">
     <link href='https://fonts.googleapis.com/css?family=Overlock' rel='stylesheet'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif">
@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/font/fontawesome-free-6.2.1-web/css/all.min.css">
     <link rel="stylesheet" href="assets/css/aboutus.css">
-    <script src="assets/js/main.js"></script>
 </head>
 <body>
     <div class="app_doctor">
@@ -23,7 +22,7 @@
                     <nav class="header__navbar">
                         <div class="header__left">
                             <div class="header__logo">
-                                <a href="index.html">
+                                <a href="#">
                                     <img src="assets/img/AiHealthLogo-2.png" alt="logo" class="header__logo-img">
                                 </a>                 
                             </div>
@@ -44,12 +43,16 @@
                                         </a>
                                     </ul>
                                 </li>                              
-                                <li class="header__right-subject-item">
-                                    Tiếng việt
-                                </li>
-                                <li class="header__right-subject-item">
-                                    Liên hệ
-                                </li>
+                                <a href="#specialist--home" class="header__right-subject-item-link">
+                                    <li class="header__right-subject-item">
+                                        Chuyên khoa
+                                    </li>
+                                </a>  
+                                <a href="#Services--home" class="header__right-subject-item-link">
+                                    <li class="header__right-subject-item">
+                                        Dịch vụ
+                                    </li>
+                                </a>
                              </ul>
                         </div>                       
                     </nav>                   
@@ -58,10 +61,37 @@
         </header>
         <div class="container grid__full-width">
             <div class="container__brand">
+                <a href="#">
+                    <div class="mySlides fade">
+                        <div class="slide__banner-img slide__banner-img1"></div>
+                    </div>
+                </a>
+                
+                <a href="#">
+                    <div class="mySlides fade">
+                        <div class="slide__banner-img slide__banner-img2"></div>
+                    </div>
+                </a>
 
+                <a href="#">                   
+                <div class="mySlides fade">
+                    <div class="slide__banner-img slide__banner-img3"></div>
+                </div>
+                </a>
+
+                <!-- Next and prev -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- buttons click change -->
+                <div class="brand__click">
+                    <span class="brand__click-change" onclick="currentSlide(1)"></span>
+                    <span class="brand__click-change" onclick="currentSlide(2)"></span>
+                    <span class="brand__click-change" onclick="currentSlide(3)"></span>
+                </div>
             </div>
-            <div class="container__in grid">
-                <div class="container__services">
+            <div class="container__in grid" id="Services--home">
+                <div class="container__services" >
                     <div class="container__services--font">
                         <span class="container__services--font-heading">Chúng tôi có thể giúp gì cho bạn?</span>
                         <span class="container__services--font-heading-content">Khám chữa bệnh chuyên nghiệp</span>
@@ -96,7 +126,7 @@
                             <div class="container__services__item--info">
                                     Đo chỉ số BMI chuẩn đoán tình trạng chỉ số bản thân
                             </div>
-                            <a href="#" class="container__services__item--button-link">
+                            <a href="assets/includes/BMI_online.html" class="container__services__item--button-link">
                                 <div class="btnservices container__services__item--button">                      
                                     <span class="btnservieces--font">Đo chỉ số</span>
                                 </div>
@@ -174,7 +204,7 @@
                     </div>
             </section>
             <!-- programs and products -->
-            <div class="container__product grid">
+            <div class="container__product grid" id = "specialist--home">
                 <div class="headprd">
                     <div class="headprd__content__product">
                         <div class="headprd__head-font">
@@ -296,7 +326,7 @@
             <header class="content__header">
                 <h2 class="content__header__tag">
                     <span class="content__header__tag--name">
-                        <span>Accepted Insurance Plans</span>
+                        <span>CHỨNG CHỈ VÀ HỢP TÁC ĐỒNG HÀNH</span>
                     </span>
                 </h2>
             </header>
@@ -382,6 +412,7 @@
                 </div>
             </div>
         </footer>
-    </div> 
+    </div>
+    <script src="assets/js/main.js"></script> 
 </body>
 </html>
