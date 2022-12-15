@@ -9,22 +9,25 @@ let getBox2 = document.getElementById('box_calc_2');
 let getBox3 = document.getElementById('box_calc_3');
 
 getBtnWeightB1.onclick = () => {
-  if (getWeightB1.value == '') {
+  if (getWeightB1.value == '' || getWeightB1.value < 1) {
     ErrorCalc[0].setAttribute('style', 'opacity:1');
   } else {
     getBox1.setAttribute('style','display: none');
     getBox2.setAttribute('style', 'display: block');
-    return getWeightB1.value;
+    return parseInt(getWeightB1.value);
   }
 }
 
+
 getBtnHeightB2.onclick = () => {
-  if (getHeightB2.value == '') {
+  if (getHeightB2.value == ''|| getHeightB2.value < 1) {
     ErrorCalc[1].setAttribute('style', 'opacity:1');
   } else {
+
     getBox2.setAttribute('style', 'display: none');
     getBox3.setAttribute('style', 'display: block');
-    return getHeightB2.value;
+    let totalBMI = parseInt(getWeightB1.value)/(parseInt(getHeightB2.value)*parseInt(getHeightB2.value)/100);
+    console.log(totalBMI);
   }   
 }
 
