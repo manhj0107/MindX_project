@@ -8,10 +8,11 @@
     <link rel="icon" type="image/x-icon" href="../img/logo__header.jpg">
     <link href='https://fonts.googleapis.com/css?family=Overlock' rel='stylesheet'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../font/fontawesome-free-6.2.1-web/css/all.min.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.2/css/all.css?fbclid=IwAR3S6ljiqVzzl8D64dheCXqQ0wWLMdARMG1u2T1MZA1746v10vuga09UDMM">
     <link rel="stylesheet" href="../css/aboutus.css">
     
 </head>
@@ -66,44 +67,84 @@
                 <div class="BMIcontent">
                     <div class="BMI_header">
                         <div class="BMI_header-img">
-
+                            <img src="../img/BMI_online.png" alt="BMI online">
                         </div>
                         <div class="BMI_header-content">
-                            <h3 class="BMI_header--header">
-
+                            <h3 class="BMI_header--headerFont">
+                                Tính chỉ số BMI - Chỉ số khối cơ thể
                             </h3>
                             <div class="BMI_header--text">
-
+                                Sử dụng công cụ này để kiểm tra chỉ số khối cơ thể (BMI) để biết bạn có đang ở mức cân nặng hợp lý hay không?
                             </div>
                         </div>
                     </div>
                     <div class="BMI_calc">
-                        <div class="box_calc" id="1">
-                            <div class="calc_frame">
+                        <div class="box_calc" id="box_calc_1">
+                            <div class="box_calc__frame">
                                 <div class="calc_frame-img">
-
+                                    <img src="../img/BMI/bmi_box1.png" alt="Cân nặng">
                                 </div>
                                 <div class="calc_frame">
-                                    <h3></h3>
-                                    <form action="">
+                                    <span class="error-calc_bmi"><i class="fa-sharp fa-solid fa-circle-xmark" style="color: red;"></i> Hãy nhập cân nặng của bạn</span>
+                                    <h3 class="calc_frame__fontBox">Cân nặng của bạn?</h3>                             
                                         <div class="calc_frame_input">
-
+                                            <input type="number" name="" id="cacl_frame-input-weight__box1" class="calc_frame_input-style">
+                                            <span class="calc_frame_input-fontUnit">KG</span>
                                         </div>
                                         <div class="calc_frame_button">
-
+                                            <button class="calc_frame_button-style" id="cacl_frame-btn-weight__box1">Xác nhận</button>
                                         </div>
-                                    </form>  
                                 </div>
                             </div>
                         </div>
-                        <div class="box_calc" id="2">
-                            <div class="calc_frame">
-                                
+                        <div class="box_calc" id="box_calc_2">
+                            <div class="box_calc__frame">
+                                <div class="calc_frame-img">
+                                    <img src="../img/BMI/bmi_box2.png" alt="Chiều cao">
+                                </div>
+                                <div class="calc_frame">
+                                    <span class="error-calc_bmi"><i class="fa-sharp fa-solid fa-circle-xmark" style="color: red;"></i> Hãy nhập Chiều cao của bạn</span>
+                                    <h3 class="calc_frame__fontBox">Chiều cao của bạn?</h3>
+                                        <div class="calc_frame_input">
+                                            <input type="number" name="" id="cacl_frame-input-weight__box2" class="calc_frame_input-style">
+                                            <span class="calc_frame_input-fontUnit">CM</span>
+                                        </div>
+                                        <div class="calc_frame_button">
+                                            <button class="calc_frame_button-style" id="cacl_frame-btn-weight__box2">Xác nhận</button>
+                                        </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="box_calc" id="3">
-                            <div class="calc_frame">
-                                
+                        <div class="box_calc" id="box_calc_3">
+                            <div class="box_resul__frame">
+                                <div class="result_calc_bmi">
+                                    <div class="result_calc_bmi-img">
+                                        <img src="/assets/img/BMI/bmi_result_2.png" alt="">
+                                        <div class="result_calc_bmi-img-title">
+                                            <span class="result_calc_bmi-img-title__span">KẾT QUẢ</span>
+                                        </div>
+                                    </div>
+                                    <div class="result_calc_bmi__info">
+                                        <div class="result__calc-font">
+                                            Chỉ số BMI của bạn: 
+                                        </div>
+                                        <div class="result__calc-eplain">
+                                            Bạn được coi là có trọng lượng cơ thể lý tưởng nếu chỉ số BMI rơi vào khoảng 18,5 đến 23,9.
+                                        </div>
+                                        <div class="result__calc-suggest">
+                                            Ngay cả những người có chỉ số BMI khỏe mạnh cũng có thể đứng trước nguy cơ mắc một số tình trạng sức khoẻ. 
+                                            Vì vậy, điều quan trọng là cần xây dựng một lối sống lành mạnh thông qua chế độ ăn uống thích hợp, 
+                                            vận động hợp lý và khám sức khỏe định kỳ để duy trì sức khỏe tốt nhất có thể.
+                                        </div>
+                                        <a href="#">
+                                            <div class="result__calc-learnMore">
+                                                <span>Tìm hiểu thêm</span>
+                                                <i class="fa-solid fa-circle-arrow-right"></i>
+                                            </div>
+                                        </a>
+                                        <button class="calc_frame_button-style">Tính lại BMI</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
