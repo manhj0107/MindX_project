@@ -596,7 +596,7 @@ CONTAINER */
     margin-bottom: 15px;
     font-size: 14px;
     line-height: 1.5;
-    margin-left: 40px;
+    margin-left: 60px;
 }
 /* content */
 .container__content{
@@ -982,4 +982,340 @@ CONTAINER */
     background: #f6f6f6;
     padding: 35px 51px;
     color: #231f20;
+}
+
+/* booking medical */
+.booking__section{
+    position: relative;
+    display: flex;
+    background-color: #fff;
+    color:#175C62;
+}
+.booking{
+    display: flex;
+    flex-flow: column nowrap;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 -20px;
+    justify-content: space-between;
+    
+}
+.booking__content{
+    width: 600px;
+}
+.booking__headline{
+    text-align: left;
+    position: relative;
+    display: block;
+}
+.booking__headline__tag{
+    font-weight: 700;
+    display: block;
+    font-family: "Overlock",Arial,Helvetica,sans-serif;
+    text-align: left;
+    font-size: 3rem;
+    line-height: 1.05;
+}
+.booking__headline__content{
+    display: block;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+.booking__subheadline{
+    line-height: 1.4;
+    font-weight: 500;
+    font-style: italic;
+    font-family: "Noto Serif",Arial,Helvetica,sans-serif;
+    font-size: 1.25rem;
+    margin-top: -20px;
+
+}
+.space{
+    display: block;
+    margin-bottom: 4em;
+}
+.booking__inner{
+    margin-left: -0px;
+    margin-right: -0px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+.booking__inner__location{
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: flex-start;
+    text-align: left;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.booking__inner__content{
+    color:#175C62;
+    background-color: #FFF;
+    width: 100%;
+}
+.booking__icon__location{
+    margin: 0;
+    max-width: 100%;
+    display: inline-block;
+    line-height: 1;
+    color:#175C62;
+}
+.booking__icon__holder{
+    font-weight: normal;
+    display: flex;
+    font-size: 2rem;
+}
+.border{
+    margin-bottom: .5em;
+    line-height: 0;
+    display: block;
+    clear: both;
+}
+.booking__inner__text p{
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: -1px;
+}
+.booking__inner__tag{
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Inter';
+    line-height: 1.35;
+    margin: 0;
+    padding: 0;
+    display: block;
+    clear: both;
+}
+.booking__inner__content{
+    font-size: 1.25rem;
+    line-height: 1.35;
+}
+.booking__inner__content span{
+    display: block;
+}
+.border1{
+    margin-bottom: 2em;
+    line-height: 0;
+    display: block;
+    clear: both;
+}
+.booking__icon__location a{
+    color: #175C62;
+    display: flex;
+    text-decoration: none;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: inherit;
+    font-weight:normal;
+    font-size: 1rem;
+    
+}
+.booking__icon__holder--social span{
+    font-size: 1rem ;
+    padding-left: .5em;
+    color:#175C62;
+    line-height: 1.1;
+}    
+.booking__icon__holder--social:hover span{
+    text-decoration: underline;
+}
+.booking__icon__holder--social:hover{
+    cursor: pointer;
+    color:lawngreen;
+}
+.border2{
+    margin-bottom: 1em;
+}
+.border3{
+    margin-top: .5em;
+    clear: both;
+    display:block;
+}
+.booking__conect{
+    margin: 0 -20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    width: 80%;
+    
+}
+.booking__conect__inner{
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: left;
+}
+.content-border{
+    border-right: 1px solid black;
+    margin-left: -20px;
+}
+.booking__conect__content{
+    border-color: #175c62;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+.booking__conect__content1{
+    justify-content: center;
+}
+.booking__icon__conect a{
+    color:#009789;
+    display: flex;
+    text-decoration: none;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: inherit;
+    font-weight:normal;
+    font-size: 2rem;
+}
+.booking__icon__holder--conect span{
+    font-size: 2rem;
+    padding-left: .25em;
+    color:#175C62;
+    line-height: 1.1;
+    font-weight: 700;
+}
+.booking__icon__holder--conect:hover span{
+    text-decoration: underline;
+
+}
+.booking__icon__holder--conect:hover{
+    color: lawngreen;
+}
+.booking__login{
+    opacity: 1;
+    width: 100%;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #ccc;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin-left: 100px;
+}
+.space1{
+    margin-bottom: 45px;
+    display: block;
+    clear: both;
+}
+.booking__login__tag h3{
+    font-size: 2rem;
+    line-height: 1.25;
+    font-weight: 700;
+    display: block;
+    font-family: "Overlock",Arial,Helvetica,sans-serif;
+
+}
+.booking__login__subheadline{
+    font-size: 1.125rem;
+    margin-top: .7em;
+    line-height: 1.4;
+    font-weight: 500;
+    font-style: italic;
+    font-family: "Noto Serif",Arial,Helvetica,sans-serif;
+}
+.wpcf7.screen__response{
+    position: absolute;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    word-wrap: normal !important;
+}
+.contact__label{
+    font-weight: 700;
+    font-family: "Overlock",Arial,Helvetica,sans-serif;
+    padding-bottom: .5em;
+    padding-left: .25em;
+    display: inline-block;
+}
+.contact__name{
+    position: relative;
+
+}
+.tag-name{
+    color: #181818;
+    background-color: #fff;
+    border-color: #175c62;
+    border-radius: 50px;
+    outline: none;
+    font: inherit;
+    line-height: 1;
+    width: 100%;
+    display: block;
+    padding: .8em;
+    border: 1px solid rgba(0,0,0,.1);
+
+}
+.fancy__select{
+    position: relative;
+    margin-top: -15px;
+}
+
+.contact__name__select{
+    width: 100%;
+    height: 3.1em;
+    border: 1px solid rgba(0,0,0,.1);
+    font: inherit;
+    display: inline-block;
+    border-radius: 50px;
+    outline: none;
+    font-weight: 400;
+    padding: .8em;
+}
+.tag-name-text{
+    resize: vertical;
+    line-height: inherit;
+    height: 9em;
+    border-radius: 20px;
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.contact__spinner{
+    visibility: hidden;
+    display: inline-block;
+    background-color: #23282d;
+    opacity: 0.75;
+    width: 24px;
+    height: 24px;
+    border: none;
+    border-radius: 100%;
+    padding: 0;
+    margin: 0 24px;
+    position: relative;
+}
+.tag-send{
+    border-radius: 50px;
+    font-weight: 700;
+    padding: 1.2em 2em !important;
+    outline: none;
+    font: inherit;
+    width: 100%;
+    line-height: 1;
+    width: 100%;
+    display: block;
+    padding: .8em;
+    background: #175C62;
+    color: #FFF;
+
+}
+.tag-send:hover {
+    color:#175C62;
+    background: #FFF;
+    cursor: pointer;
 }
