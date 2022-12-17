@@ -841,6 +841,10 @@ CONTAINER */
     display: none;
 }
 
+.animationshowBox_calc {
+    animation: opacityshow ease-in 0.7s;
+}
+
 .box_calc:first-child {
     display: block;
 }
@@ -933,6 +937,7 @@ CONTAINER */
 
 /* result BMI */
 .box_resul__frame{
+    display: none;
     position: relative;
     padding: 72px 10px 15px;
 }
@@ -983,3 +988,147 @@ CONTAINER */
     padding: 35px 51px;
     color: #231f20;
 }
+
+.result__calc-font {
+    margin: 0 0 25px;
+}
+
+.rating_bmi {
+    display: flex;
+}
+
+.result__calc-font-style {
+    font-size: 1.25rem;
+    line-height: 28px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-right: 10px;
+}
+
+.result__calc-font-style-2 {
+    display: block;
+    font-size: 1.25rem;
+    line-height: 28px;
+    font-weight: 700;
+}
+
+.rcfs1 {
+    color: #8da0a1;
+}
+
+.rcfs2 {
+    color: #A6BA52;
+}
+
+.rcfs3 {
+    color: #FFC607;
+}
+
+.rcfs4 {
+    color: #E66C6B;
+}
+
+
+#resutl__total__BMI {
+    font-size: 1.25rem;
+}
+
+.result__calc-suggest, .result__calc-eplain {   
+    margin: 26px 0;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.result__calc-learnMore {
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+    text-transform: uppercase;
+    color: #4bbbc9;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 25px;
+}
+
+/* suggets */
+.suggets {
+    display: none;
+    margin: 24px 0;
+}
+
+.suggets__alert, .suggets__after {
+    padding: 30px 200px;
+}
+
+.suggets--i{
+    color: #2D87F3
+}
+
+.suggets--span{
+    margin-left: 4px;
+    color: rgb(140, 140, 140);
+    font-weight: 700;
+}
+
+.suggets--p{
+    font-size: 16px;
+    line-height: 26px;
+    color: #262626;
+    letter-spacing: 0px;
+    font-weight: 400;
+}
+
+.question__detail {
+    margin: 25px;
+}
+
+.question__detail__heading {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
+.question__detail__heading div{
+    display: flex;
+    align-items: center;
+}
+
+.question__detail__heading p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.question__answer {
+    padding: 1rem;
+}
+
+.question__answer-move {
+    background-color: #F8F9FC;
+    border-radius: 6px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+
+.question__answer p {
+    font-size: 16px;
+    line-height: 26px;
+    margin: 0;
+    padding: 1rem;
+}
+
+/* toggles */
+.question__detail__heading-bold {
+    font-weight: 700;
+}
+
+.showques {
+    max-height: 500px;  
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~ */
