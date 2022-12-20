@@ -13,7 +13,10 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.2/css/all.css?fbclid=IwAR3S6ljiqVzzl8D64dheCXqQ0wWLMdARMG1u2T1MZA1746v10vuga09UDMM">
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="app_doctor">
@@ -61,19 +64,38 @@
             </div>         
         </header>
 
+        <div class="father__map">
+            <div class="map_search">
+                <div class="open__list_branch">
+                    <i class="fa-sharp fa-solid fa-circle-caret-right btn__open-listBranch"></i>
+                </div>
+                <div class="list_branch">
+                    <i class="fa-sharp fa-solid fa-circle-caret-left btn__close-listBranch"></i>
+                    <div class="card-body card__heading-font">
+                        <h5 class="card-title branch__heading-font">Chi nhánh AiHealth</h5>
+                    </div>			
+                        <div class="leaderboard" id="listBranchMap"></div>
+                    </div>
+                </div>
+                <div id='map'></div>
+                <div class="branch__Info-detail">
+                </div>	
+            </div>
+        </div>   
+
         <div class="booking grid__full-width">
             <div class="grid">
                 <section class="booking__section">
-                    <div class="booking">
+                    <div class="booking__father__ct">
                         <div class="booking__content">
                             <header class="booking__headline" style="max-width: 400px;">
                                 <h2 class="booking__headline__tag">
                                     <span class="booking__headline__content">
-                                        <span>Comprehensive Mental Care</span>
+                                        <span>Chăm sóc sức khỏe tổng quát</span>
                                     </span>
                                 </h2>
                                 <div class="booking__subheadline">
-                                    Delivering world class health care
+                                    Cung cấp dịch vụ chăm sóc sức khỏe đạt tiêu chuẩn thế giới
                                 </div>
                             </header>
                             <div class="space"></div>
@@ -195,24 +217,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="content-border"></div>
-                                <div class="booking__conect__inner">
-                                    <div class="booking__conect__content1">
-                                        <div class="booking__conect__content--text">
-                                            <p>Online Schedule</p>
-                                        </div>
-                                        <div class="border3"></div>
-                                        <div class="booking__icon__conect">
-                                            <a class = "booking__icon__holder--conect" href="#">
-                                                <i class="fa-sharp fa-solid fa-calendar-check"></i>
-                                                <span>Book here</span>
-                                            </a> 
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                             <div class="border2"></div>
-                        </div>
+                        </div>  
                     </div>
                     <div class="booking__login">
                         <div class="booking__login__inner">
@@ -220,86 +227,132 @@
                             <header class="booking__headline">
                                 <h3 class="booking__login__tag">
                                     <span class="booking__headline__content">
-                                        <span>Send us a message</span>
+                                        <span>Đặt lịch hẹn</span>
                                     </span>
                                 </h3>
-                                <div class="booking__login__subheadline">
-                                    Required fields are marked with an asterisk(*).
-                                </div>
+                                
                             </header>
                             <div class="border1"></div>
                             <div class="booking__contact__form">
-                                <div role="form" class="wpcf7" id="wpcf7-f4-p13-o1" lang="en-US" dir="ltr">
+                                <div class="wpcf7" id="wpcf7-f4-p13-o1" lang="en-US" dir="ltr">
                                     <div class="screen__response">
                                         <p role="status" aria-live="polite" aria-atomic="true"></p>
                                         <ul></ul>
                                     </div>
-                                    <form>
-                                        <div style="display: none;">
-                                            <input type="hidden" name="_wpcf7" value="4">
-                                            <input type="hidden" name="_wpcf7" value="4">
-                                            <input type="hidden" name="_wpcf7" value="4">
-                                            <input type="hidden" name="_wpcf7" value="4">
-                                            <input type="hidden" name="_wpcf7" value="7">
-                                            <input type="hidden" name="_wpcf7" value="13">
-                                        </div>
                                         <div class="contact__form">
-                                            <label class="contact__label">First and Last name*</label>
+                                            <label class="contact__label">Họ và tên</label>
                                             <br>
                                             <span class="contact__name" data-name="your-name">
-                                                <input type="text" name="your-name" value size="40" class="tag-name" placeholder="Your Name">
+                                                <input type="text" name="your name" size="40" class="tag-name get_name" placeholder="Nhập họ và tên">
                                             </span>
                                             <p></p>
                                             <p>
-                                                <label class="contact__label">Email address*</label>
+                                                <label class="contact__label"> Số điện thoại</label>
                                                 <br>
                                                 <span class="contact__name" data-name="your-name">
-                                                    <input type="text" name="your-email" value size="40" class="tag-name" placeholder="Your email">
+                                                    <input type="text" name="phone number" size="40" class="tag-name get_number" placeholder="Nhập số điện thoại" id="1">
                                                 </span>
                                             </p>
                                             <p>
-                                                <label class="contact__label">Condition*</label>
+                                                <label class="contact__label">Chuyên khoa</label>
                                                 <br>
                                                 <span class="contact__name" data-name="your-condition">
                                                     <div class="fancy__select">
                                                         <select name="your-condition" class="contact__name__select">
-                                                            <option value="Clinical Depression" class="options">
-                                                                Clinical Depression
+                                                            <option class="options">
+                                                                Khoa ngoại
                                                             </option>
-                                                            <option value="Post Traumatic Stress">
-                                                                Post Traumatic Stress
+                                                            <option>
+                                                                Chuyên khoa nội
                                                             </option>
-                                                            <option value="Panic Disorders">
-                                                                Panic Disorders
+                                                            <option>
+                                                                Tiêu hóa
                                                             </option>
-                                                            <option value="Stress Management">
-                                                                Stress Management
+                                                            <option>
+                                                                Xét nghiệm
                                                             </option>
-                                                            <option value="Anxiety Disorder">
-                                                                Anxiety Disorder
+                                                            <option>
+                                                                Tim mạch
+                                                            </option>
+                                                            <option>
+                                                                Thần kinh
+                                                            </option>
+                                                            <option>
+                                                                Truyền nhiễm
+                                                            </option>
+                                                            <option>
+                                                                Tai mũi họng
+                                                            </option>
+                                                            <option>
+                                                                Chuyên khoa mắt
+                                                            </option>
+                                                            <option>
+                                                                Răng hàm mặt
                                                             </option>
                                                         </select>
                                                     </div>
                                                 </span>
                                             </p>
                                             <p>
-                                                <label class="contact__label">Additional notes*.</label>
+                                                <label class="contact__label">Đặt lịch khám</label>
+                                                <br>
+                                                <input type="date" name="" id="date">
+                                                
+                                            </p>
+                                            <p>
+                                                <label class="contact__label"> Cơ sở</label>
+                                                <br>
+                                                <span class="contact__name" data-name="your-condition">
+                                                    <div class="fancy__select">
+                                                        <select name="your-condition" class="contact__name__branch faciliti_base">
+                                                            <option>
+                                                                Cơ sở Thành Công Hà Nội
+                                                            </option>
+                                                            <option>
+                                                                Cơ sở Nguyễn Chí Thanh Hà Nội
+                                                            </option>
+                                                            <option>
+                                                                Cơ sở 01 Quang Trung TP HCM
+                                                            </option>
+                                                            <option>
+                                                                Cơ sở 20 Cộng Hòa TP HCM
+                                                            </option>
+                                                            <option>
+                                                                Cơ sở Đà Nẵng
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </span>                                                
+                                            </p>
+                                            <p>
+                                                <label class="contact__label">Ghi chú.</label>
                                                 <br>
                                                 <span class="contact__name" data-name="your-name">
-                                                    <textarea name="your-message" cols="70" rows="10" class="tag-name-text" placeholder="Additional notes"></textarea>
+                                                    <textarea name="your-message" cols="70" rows="10" class="tag-name-text get_note" placeholder="Lời nhắn..."></textarea>
                                                 </span>
                                             </p>
                                             <p>
-                                                <input type="submit" value="Send Your Message" class="tag-send">
+                                                <input type="submit" value="Đặt lịch" class="tag-send get_send">
                                                 <span class="contact__spinner"></span>
                                             </p>
                                         </div>
-                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+                <div class="result__booking">
+                    <h1 class="booking__headline__tag">Lịch sử đặt lịch khám</h1>
+                    <div class="search-container">
+                        <input type="text" placeholder="nhập số điện thoại" name="search" id="check" class="topnav">
+                        <button type="submit" id="btnSearchSDT"><i class="fa fa-search"></i></button>
+                        <button type="submit" id="btnDelResult">Ẩn kết quả tìm kiếm</button>
+                        <div class="border"></div>
+                        <div id="result" class="booking__result">
+                            
+                        </div>
+                    </div>
+                </div>          
             </div>
         </div>
 
@@ -362,6 +415,8 @@
             </div>
         </footer>
     </div>
-    <script src="../js/main.js"></script>
+    <script src="../js/booking.js"></script>
+    <script src="../js/map.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
 </body>
 </html>
