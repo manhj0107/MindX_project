@@ -67,6 +67,8 @@ getBtnHeightB2.onclick = () => {
 
 for (let i = 0; i < getBtnCaclAgain.length; i++) {
   getBtnCaclAgain[i].onclick = () => {
+    ErrorCalc[0].setAttribute('style', 'opacity:0');
+    ErrorCalc[1].setAttribute('style', 'opacity:0');
     getBox1.setAttribute('style','display: none');
     getBox2.setAttribute('style', 'display: none');
     getBox3.setAttribute('style', 'display: none');
